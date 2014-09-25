@@ -7,4 +7,5 @@ RUN \
   apt-get install -yq wget perl libdbi-perl libdbd-mysql-perl libterm-readkey-perl libio-socket-ssl-perl man mysql-client &&\
   wget -q percona.com/get/percona-toolkit.deb &&\
   dpkg -i percona-toolkit.deb &&\
+  rm percona-toolkit.deb &&\
   apt-get clean

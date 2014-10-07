@@ -6,7 +6,8 @@ RUN \
   echo 'deb http://sfo1.mirrors.digitalocean.com/mariadb/repo/10.0/debian wheezy main' > /etc/apt/sources.list.d/mariadb.list &&\
   apt-get update &&\
   apt-get upgrade -qy &&\
-  apt-get install -yq wget perl libdbi-perl libdbd-mysql-perl libterm-readkey-perl libio-socket-ssl-perl mariadb-client vim mg &&\
+  apt-get install -yq wget perl libdbi-perl libdbd-mysql-perl libterm-readkey-perl libio-socket-ssl-perl mariadb-client vim mg man &&\
   wget -q percona.com/get/percona-toolkit.deb &&\
   dpkg -i percona-toolkit.deb &&\
+  rm percona-toolkit.deb &&\
   apt-get clean
